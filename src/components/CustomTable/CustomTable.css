@@ -1,0 +1,10 @@
+.custom-table-wrapper .row
+{
+    display: flex;
+}
+
+.custom-table-wrapper .cell
+{
+    margin: 5px;
+    width: 200px;
+}

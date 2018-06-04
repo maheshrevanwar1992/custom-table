@@ -1,0 +1,18 @@
+[
+    {
+        "id": 1,
+        "firstName": "ABC",
+        "lastName": "XYZ",
+        "phoneNumber": "12345",
+        "email": "abc@pqr.com",
+        "status": "active"
+    },
+    {
+        "id": 2,
+        "firstName": "XYZ",
+        "lastName": "ABC",
+        "phoneNumber": "54321",
+        "email": "pqr@abc.com",
+        "status": "active"
+    }
+]
