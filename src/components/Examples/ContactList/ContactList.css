@@ -1,0 +1,5 @@
+.contact-list .textbox
+{
+    display: flex;
+    justify-content: center;
+}

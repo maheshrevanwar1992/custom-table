@@ -1,0 +1,22 @@
+.textbox {
+    display: flex;
+    flex-grow: 1;
+}
+
+.textbox input
+{
+    width: 100%;
+}
+
+.textbox .input-field {
+    padding: 0 5px;
+}
+
+.textbox input {
+    padding: 0;
+    border: none;
+}
+
+.textbox input{
+    outline: none;
+}
