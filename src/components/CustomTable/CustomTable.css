@@ -6,6 +6,7 @@ div
 .custom-table-wrapper
 {
     border: 1.5px solid;
+    width: 1000px;
 }
 .custom-table-wrapper .row
 {
@@ -16,25 +17,31 @@ div
 .custom-table-wrapper .cell
 {
     width: 200px;
-    height: 20px;
+    height: 30px;
     display: flex;
     align-content: center;
     justify-content: center;
     border-right: 1px solid;
 }
 
-.custom-table-wrapper .cell:last-child
-{
-    border: none;
-}
 
 .custom-table-wrapper .cell .textbox .text{
-    padding: 5px;
+    padding: 0 5px;
     overflow: hidden;
     text-overflow: ellipsis;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-grow: 1;
     white-space: nowrap;
+    min-width: 0;
+}
+
+.custom-table-wrapper .cell .drop-down {
+    padding: 0;
+}
+
+.custom-table-wrapper .cell .drop-down select {
+    padding: 0 2px;
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    background-color: transparent;
 }
