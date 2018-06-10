@@ -12,7 +12,11 @@
 
 .add-contact-popover .field
 {
-    margin-bottom: 10px;
+    margin-bottom: 15px;
+}
+.add-contact-popover .field .label
+{
+    margin-bottom: 5px;
 }
 .add-contact-popover .textbox
 {
@@ -21,4 +25,11 @@
     border-radius: 3px;
     display: flex;
     align-items: center;
+}
+
+.add-contact-popover .field.status select{
+    width: 200px;
+    height: 30px;
+    border-radius: 4px;
+    outline: none;
 }

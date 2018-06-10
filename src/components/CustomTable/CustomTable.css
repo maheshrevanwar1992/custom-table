@@ -23,7 +23,7 @@ div
     border-right: 1px solid;
 }
 .custom-table-wrapper .cell:last-child {
-    border-right: none;
+    border-right: 0.5px solid;
 }
 
 .custom-table-wrapper .column-title
@@ -32,14 +32,7 @@ div
     border-bottom: 0.5px solid;
     border-right: 1.5px solid;
 }
-.custom-table-wrapper .column-title:last-child
-{
-    border-right: none;
-}
-.custom-table-wrapper .column-title:first-child
-{
-    border-left: 0.25px solid;
-}
+
 
 .custom-table-wrapper .cell .textbox .text{
     padding: 0 5px;
