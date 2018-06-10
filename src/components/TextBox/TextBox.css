@@ -16,6 +16,8 @@
 
 .textbox .input-field {
     padding: 0 5px;
+    height: 100%;
+    display: flex;
 }
 
 .textbox input {

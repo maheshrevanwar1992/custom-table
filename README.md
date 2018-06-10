@@ -11,7 +11,7 @@ custom-table
 ```bash
 # Make sure that you've installed the dependencies
 npm install
-# Move to example directory
+# Move to directory
 cd custom-table
 npm install
 npm start

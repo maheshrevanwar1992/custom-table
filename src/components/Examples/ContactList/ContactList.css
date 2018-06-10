@@ -26,6 +26,11 @@ html, body{
     align-items: center;
 }
 
+.contact-list .textbox:hover,.contact-list .textbox .input-field
+{
+    background-color: #FFF;
+}
+
 .contact-list .no-results-found
 {
     display: flex;
