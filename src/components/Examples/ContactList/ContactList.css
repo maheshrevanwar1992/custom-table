@@ -31,6 +31,10 @@ html, body{
     background-color: #FFF;
 }
 
+.contact-list .textbox.error .input-field{
+    background-color: #ef9d9d;
+}
+
 .contact-list .no-results-found
 {
     display: flex;
