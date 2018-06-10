@@ -40,3 +40,7 @@ html, body{
     color: #2020ec;
     cursor: pointer;
 }
+
+.contact-list .table-header-row {
+    background-color: #d8d6e4;
+}
