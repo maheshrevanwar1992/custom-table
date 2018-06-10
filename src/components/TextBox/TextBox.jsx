@@ -6,14 +6,16 @@ export default class TextBox extends React.PureComponent {
     static defaultProps = {
         onChange: () => null,
         onBlur: () => null,
-        value: ''
+        value: '',
+        isValid: () => true
     }
 
     constructor(props) {
         super(props);
         this.state = {
             editMode: false,
-            value: props.value === undefined ? '' : props.value
+            value: props.value === undefined ? '' : props.value,
+            showError: false
         }
     }
 
@@ -35,12 +37,27 @@ export default class TextBox extends React.PureComponent {
         this.setState({
             value: e.target.value
         });
-        this.props.onChange(e.target.value);
     };
 
+    isValid = () => {
+        const { value } = this.state;
+        if (typeof (this.props.isValid) === 'function' && !this.props.isValid(value)) {
+            this.setState({
+                showError: true
+            });
+            return false;
+        }
+        this.setState({
+            showError: false
+        });
+        return true;
+    }
+
     handleOnBlur = () => {
-        this.props.onBlur(this.state.value);
-        this.closeEditMode();
+        if (this.isValid()) {
+            this.props.onBlur(this.state.value);
+            this.closeEditMode();
+        }
     };
 
     componentDidUpdate() {
@@ -54,9 +71,9 @@ export default class TextBox extends React.PureComponent {
     }
 
     render() {
-        const { value, editMode } = this.state;
+        const { value, editMode, showError } = this.state;
         return (
-            <div className='textbox' onClick={this.openEditMode}>
+            <div className={`textbox ${showError ? 'error' : ''}`} onClick={this.openEditMode}>
                 {
                     editMode ?
                         (<div className='input-field'>

@@ -2,6 +2,7 @@ import React from 'react';
 import { Modal, Button } from 'react-bootstrap'
 import Textbox from '../../../TextBox/TextBox.jsx';
 import StatusDropdown from './StatusDropdown.jsx';
+import { utils } from '../../../../common';
 import './AddContact.css';
 
 
@@ -61,19 +62,20 @@ export default class AddContact extends React.PureComponent {
                     <Modal.Body bsClass='add-contact-popover'>
                         <div className='field first-name'>
                             <div className='label'>First Name</div>
-                            <Textbox onChange={(value) => this.updateFormValue('firstName', value)} />
+                            <Textbox onBlur={(value) => this.updateFormValue('firstName', value)} />
                         </div>
                         <div className='field last-name'>
                             <div className='label'>Last Name</div>
-                            <Textbox onChange={(value) => this.updateFormValue('lastName', value)} />
+                            <Textbox onBlur={(value) => this.updateFormValue('lastName', value)} />
                         </div>
                         <div className='field email'>
                             <div className='label'>Email</div>
-                            <Textbox onChange={(value) => this.updateFormValue('email', value)} />
+                            <Textbox onBlur={(value) => this.updateFormValue('email', value)}
+                                isValid={utils.isEmailValid} />
                         </div>
                         <div className='field phone-number'>
                             <div className='label'>Phone Number</div>
-                            <Textbox onChange={(value) => this.updateFormValue('phoneNumber', value)} />
+                            <Textbox onBlur={(value) => this.updateFormValue('phoneNumber', value)} />
                         </div>
                         <div className='field status'>
                             <div className='label'>Status</div>
@@ -82,7 +84,7 @@ export default class AddContact extends React.PureComponent {
                     </Modal.Body>
                     <Modal.Footer>
                         <Button onClick={this.handleClose}>Cancel</Button>
-                        <Button bsStyle="primary" onClick={this.handleOnCreate}>Create</Button>
+                        <Button bsStyle='primary' onClick={this.handleOnCreate}>Create</Button>
                     </Modal.Footer>
                 </Modal>
             </div>

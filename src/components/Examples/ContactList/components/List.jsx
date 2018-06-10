@@ -2,11 +2,10 @@ import React from 'react';
 import CustomTable from '../../../CustomTable/index.js';
 import TextBox from '../../../TextBox/TextBox.jsx';
 import StatusDropdown from './StatusDropdown.jsx';
+import { utils } from '../../../../common';
 
 
 export default class List extends React.PureComponent {
-
-
 
     render() {
         const { contactListData, updateValue, onDelete } = this.props;
@@ -34,7 +33,7 @@ export default class List extends React.PureComponent {
                             </CustomTable.Cell>
                             <CustomTable.Cell>
                                 <TextBox value={contact.email}
-                                    onBlur={(value) => updateValue('email', contact.id, value)} />
+                                    onBlur={(value) => updateValue('email', contact.id, value)} isValid={utils.isEmailValid} />
                             </CustomTable.Cell>
                             <CustomTable.Cell>
                                 <TextBox value={contact.phoneNumber}
@@ -46,7 +45,7 @@ export default class List extends React.PureComponent {
                             </CustomTable.Cell>
                             <CustomTable.Cell>
                                 <div className='link'
-                                    onClick={() => onDelete(contact.id)} >Delete</div>
+                                    onClick={() => onDelete(contact.id)}>Delete</div>
                             </CustomTable.Cell>
                         </CustomTable.Row>
                     ))

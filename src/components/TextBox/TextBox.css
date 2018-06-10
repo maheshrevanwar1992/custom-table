@@ -1,6 +1,11 @@
 .textbox {
     display: flex;
     flex-grow: 1;
+    height: 100%;
+}
+
+.textbox.error{
+    background-color: #ef9d9d;
 }
 
 .textbox input

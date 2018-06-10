@@ -11,14 +11,14 @@ export default class Dropdown extends React.PureComponent {
         const { values, value, placeholder } = this.props;
         return (
             <div className='drop-down'>
-                <select onChange={this.onChange}>
+                <select value={value} onChange={this.onChange}>
                     {
                         placeholder &&
-                        <option value={null} selected={value === null}>{placeholder}</option>
+                        <option value={null}>{placeholder}</option>
                     }
                     {
                         values.map((option) => {
-                            return <option key={option.id} value={option.id} selected={value === option.id}>{option.label}</option>
+                            return <option key={option.id} value={option.id}>{option.label}</option>
                         })
                     }
                 </select>
