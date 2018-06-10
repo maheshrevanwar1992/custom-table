@@ -1,0 +1,24 @@
+.add-contact
+{
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 15px;
+}
+
+.add-contact-popover
+{
+    padding: 20px;
+}
+
+.add-contact-popover .field
+{
+    margin-bottom: 10px;
+}
+.add-contact-popover .textbox
+{
+    height: 30px;
+    border: 1px solid;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+}

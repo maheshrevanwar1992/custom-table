@@ -5,7 +5,7 @@
         "lastName": "XYZ",
         "phoneNumber": "12345",
         "email": "abc@pqr.com",
-        "status": "active"
+        "status": "Inactive"
     },
     {
         "id": 2,
@@ -13,6 +13,6 @@
         "lastName": "ABC",
         "phoneNumber": "54321",
         "email": "pqr@abc.com",
-        "status": "active"
+        "status": "Active"
     }
 ]

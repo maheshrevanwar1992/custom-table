@@ -6,7 +6,6 @@ div
 .custom-table-wrapper
 {
     border: 1.5px solid;
-    width: 1000px;
 }
 .custom-table-wrapper .row
 {
@@ -19,9 +18,20 @@ div
     width: 200px;
     height: 30px;
     display: flex;
-    align-content: center;
+    align-items: center;
     justify-content: center;
     border-right: 1px solid;
+}
+
+.custom-table-wrapper .column-title
+{
+    font-weight: 700;
+    border-bottom: 0.5px solid;
+    border-right: 1.5px solid;
+}
+.custom-table-wrapper .column-title:last-child
+{
+    border-right: none;
 }
 
 

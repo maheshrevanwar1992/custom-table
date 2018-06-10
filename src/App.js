@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import './common/bootstrap.css';
 import './App.css';
 import { ContactList } from './components/Examples/';
 

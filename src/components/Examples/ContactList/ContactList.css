@@ -4,11 +4,19 @@ html, body{
     background-color: #f2f2f2;
 }
 
+.app-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
 .contact-list
 {
     display: flex;
     justify-content: center;
     padding-top: 30px;
+    flex-direction: column;
+    align-items: center;
+    width: 1200px;
 }
 
 .contact-list .textbox

@@ -5,6 +5,7 @@ export default class TextBox extends React.PureComponent {
 
     static defaultProps = {
         onChange: () => null,
+        onBlur: () => null,
         value: ''
     }
 
@@ -34,10 +35,11 @@ export default class TextBox extends React.PureComponent {
         this.setState({
             value: e.target.value
         });
+        this.props.onChange(e.target.value);
     };
 
     handleOnBlur = () => {
-        this.props.onChange(this.state.value);
+        this.props.onBlur(this.state.value);
         this.closeEditMode();
     };
 
