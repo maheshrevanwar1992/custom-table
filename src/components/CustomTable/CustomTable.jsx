@@ -9,7 +9,7 @@ export default class CustomTable extends React.PureComponent {
             <div className='custom-table-wrapper'>
                 {
                     React.Children.map(this.props.children, (child) => {
-                        if (child.type === TableHeader) {
+                        if (child && child.type === TableHeader) {
                             return <TableHeader>{child.props.children}</TableHeader>
                         }
                         return child;

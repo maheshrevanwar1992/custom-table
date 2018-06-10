@@ -21,6 +21,7 @@ export default class List extends React.PureComponent {
                     <CustomTable.HeaderCell></CustomTable.HeaderCell>
                 </CustomTable.TableHeader>
                 {
+                    contactListData.length > 0 &&
                     contactListData.map((contact) => (
                         <CustomTable.Row key={contact.id}>
                             <CustomTable.Cell>
@@ -49,6 +50,10 @@ export default class List extends React.PureComponent {
                             </CustomTable.Cell>
                         </CustomTable.Row>
                     ))
+                }
+                {
+                    contactListData.length === 0 &&
+                    (<div className='no-results-found row'>No Contacts found</div>)
                 }
             </CustomTable>
         );
