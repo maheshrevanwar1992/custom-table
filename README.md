@@ -9,12 +9,13 @@ custom-table
 
 1. Contact List
 ```bash
-# Make sure that you've installed the dependencies
-npm install
-# Move to directory
+# Download project to local machine
+# Move to project directory
 cd custom-table
 npm install
 npm start
+
+# Check browser with http://localhost:3000/
 ```
 Supported funcationality
 1. Add new Contact
