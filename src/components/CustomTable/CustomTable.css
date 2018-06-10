@@ -22,6 +22,9 @@ div
     justify-content: center;
     border-right: 1px solid;
 }
+.custom-table-wrapper .cell:last-child {
+    border-right: none;
+}
 
 .custom-table-wrapper .column-title
 {
@@ -35,7 +38,7 @@ div
 }
 .custom-table-wrapper .column-title:first-child
 {
-    border-left: 0.5px solid;
+    border-left: 0.25px solid;
 }
 
 .custom-table-wrapper .cell .textbox .text{
